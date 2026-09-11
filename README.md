@@ -87,6 +87,32 @@ The Tokenizer is a necessary and pervasive component of Large Language Models (L
 
 Ongoing...
 
+---
+
+**Running the lectures locally**
+
+This repo uses [uv](https://docs.astral.sh/uv/) to manage a Python environment for running the notebooks.
+
+1. From the repo root, sync the environment (this creates a `.venv/` and installs all dependencies from `pyproject.toml`):
+
+   ```bash
+   uv sync
+   ```
+
+2. Register the environment as a Jupyter kernel:
+
+   ```bash
+   uv run python -m ipykernel install --user --name=nn-zero-to-hero --display-name="Python (nn-zero-to-hero)"
+   ```
+
+3. Launch Jupyter and open any notebook under [lectures/](lectures/), selecting the "Python (nn-zero-to-hero)" kernel:
+
+   ```bash
+   uv run jupyter notebook
+   ```
+
+   Or, if you use VS Code / another editor with Jupyter support, just open a notebook and pick the "Python (nn-zero-to-hero)" kernel from the kernel picker.
+
 **License**
 
 MIT
